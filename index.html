@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="fav2.png">
+    <title>Page Loader</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:url("1.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #fff;
+            border-top: 6px solid #ff7e5f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-text {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .loader {
+                width: 40px;
+                height: 40px;
+                border-width: 4px;
+            }
+
+            .loader-text {
+                font-size: 1rem;
+            }
+        }
+        title{
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                window.location.href = "login.html";
+            }, 2000); // Redirect after 2 seconds
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div class="loader"></div>
+        <div class="loader-text">Loading, please wait...</div>
+    </div>
+</body>
+</html>
